@@ -25,4 +25,10 @@ document.getElementById('menu-toggle').addEventListener('click', () => {
   
     this.reset();
   });
+
+  // Toggle hamburger menu on mobile
+document.getElementById("menu-toggle").addEventListener("click", function() {
+    // Toggle 'active' class to show/hide navigation links on mobile
+    document.querySelector(".nav-links").classList.toggle("active");
+  });
   

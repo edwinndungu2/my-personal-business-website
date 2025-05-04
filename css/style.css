@@ -21,7 +21,7 @@
   
   /* Navigation */
   header {
-    background-color: #18202c;
+    background-color: rgba(24, 32, 44, 0.95);
     padding: 1rem 0;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -59,6 +59,7 @@
     color: #00acc1;
   }
   
+  /* Mobile menu toggle */
   #menu-toggle {
     display: none;
     background: none;
@@ -67,9 +68,37 @@
     font-size: 1.5rem;
   }
   
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(24, 32, 44, 0.95);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    #menu-toggle {
+      display: block;
+      font-size: 2rem;
+    }
+  
+    .nav {
+      justify-content: space-between;
+    }
+  }
+  
   /* Hero Section */
   .hero {
-    background: linear-gradient(145deg, #19212f, #0f131c);
+    background: rgba(25, 33, 47, 0.85);
     text-align: center;
     padding: 6rem 0;
     color: #00acc1;
@@ -86,10 +115,20 @@
     margin-top: 1rem;
   }
   
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  
   /* Sections */
   section {
     padding: 5rem 0;
-    background-color: #121923;
+    background-color: rgba(18, 25, 35, 0.92);
   }
   
   h2 {
@@ -97,6 +136,16 @@
     font-size: 2.5rem;
     color: #00acc1;
     margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    section {
+      padding: 3rem 0;
+    }
   }
   
   /* About */
@@ -115,7 +164,7 @@
   }
   
   .service-card {
-    background-color: #1d2533;
+    background-color: rgba(29, 37, 51, 0.95);
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid #2a3545;
@@ -127,6 +176,13 @@
     box-shadow: 0 0 18px rgba(0, 188, 212, 0.1);
   }
   
+  @media (max-width: 768px) {
+    .service-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
   /* Portfolio */
   .portfolio-grid {
     display: grid;
@@ -135,7 +191,7 @@
   }
   
   .portfolio-item {
-    background-color: #1d2533;
+    background-color: rgba(29, 37, 51, 0.95);
     border-radius: 12px;
     padding: 1.5rem;
     border: 1px solid #2a3545;
@@ -152,9 +208,15 @@
     font-weight: bold;
   }
   
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
   /* Testimonials */
   .testimonial {
-    background-color: #1d2533;
+    background-color: rgba(29, 37, 51, 0.95);
     padding: 2rem;
     border-left: 4px solid #00acc1;
     margin: 1rem 0;
@@ -197,7 +259,7 @@
   
   /* Footer */
   footer {
-    background-color: #18202c;
+    background-color: rgba(24, 32, 44, 0.95);
     color: #cfd8dc;
     text-align: center;
     padding: 2rem 0;
